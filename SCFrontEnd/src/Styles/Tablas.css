@@ -1,0 +1,462 @@
+/* .tableVoluntarios{
+    color: black;
+    background-color: white;
+    
+}
+
+.Div-Table{
+    display: flex;
+    justify-content: center;
+}
+
+.Div-Table {
+    overflow-x: auto; 
+  
+  .TableUsuarios {
+    width: 50%; 
+    border-collapse: collapse; 
+  }
+  
+  .TableUsuarios th,
+  .TableUsuarios td {
+    padding: 8px 12px; 
+    text-align: center; 
+  }
+  
+  .TableUsuarios th {
+    background-color: #333;
+    color: white;
+  }
+  
+  .TableUsuarios td {
+    border: 1px solid #ccc; 
+  }
+  
+
+  @media (max-width: 768px) {
+    .Div-Table {
+      overflow-x: scroll; 
+    }
+  }
+  
+
+.Namelist{
+    display: flex;
+    justify-content: center;
+} */
+
+
+/* 
+.TableUsuarios {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.TableUsuarios th, .TableUsuarios td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: center;
+}
+
+.TableUsuarios th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+}
+
+
+.btnEliminar, .btnModificar {
+  background-color: #ff0000;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  margin-right: 5px;
+  cursor: pointer;
+} */
+
+@media (max-width: 768px) {
+  .Div-Table {
+    overflow-x: scroll; 
+  }
+}
+
+.btnModificar {
+  background-color: #007bff;
+}
+
+.btnEliminar:hover, .btnModificar:hover {
+  background-color: #ff3333;
+}
+
+/* Estilos para el encabezado */
+.Namelist {
+  text-align: center;
+}
+
+/* Estilos para el contenedor principal */
+.user-registration {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Estilos para los mensajes emergentes (toast) */
+.Toastify__toast {
+  background-color: #333;
+  color: #fff;
+}
+
+/* ------------------------- */
+
+/* Estilos para la tabla de Reservaciones */
+.TableReservaciones {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.TableReservaciones th, .TableReservaciones td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: center;
+}
+
+.TableReservaciones th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+}
+
+/* Estilos para los botones de acción */
+.btnEliminar, .btnModificar {
+  background-color: #ff0000;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  margin-right: 5px;
+  cursor: pointer;
+}
+
+.btnModificar {
+  background-color: #007bff;
+}
+
+.btnEliminar:hover, .btnModificar:hover {
+  background-color: #ff3333;
+}
+
+/* Estilos para el encabezado */
+.Namelist {
+  text-align: center;
+}
+
+/* Estilos para el contenedor principal */
+.user-reservations {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Estilos para los mensajes emergentes (toast) */
+.Toastify__toast {
+  background-color: #333;
+  color: #fff;
+}
+
+
+
+/* ---------------------------- */
+
+/* Estilos para la tabla de Registro de Tipos */
+/* .TableTipo {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.TableTipo th, .TableTipo td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: center;
+}
+
+.TableTipo th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+} */
+
+/* Estilos para los botones de acción */
+.btnEliminar, .btnModificar {
+  background-color: #ff0000;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  margin-right: 5px;
+  cursor: pointer;
+}
+
+.btnModificar {
+  background-color: #007bff;
+}
+
+.btnEliminar:hover, .btnModificar:hover {
+  background-color: #ff3333;
+}
+
+/* Estilos para el encabezado */
+.Namelist {
+  text-align: center;
+}
+
+/* Estilos para el contenedor principal */
+.type-registration {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Estilos para los mensajes emergentes (toast) */
+.Toastify__toast {
+  background-color: #333;
+  color: #fff;
+}
+
+/* --------------------------- */
+
+/* Estilos para la tabla de Registro de Campañas */
+.TableCampaña {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.TableCampaña th, .TableCampaña td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: center;
+}
+
+.TableCampaña th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+}
+
+/* Estilos para los botones de acción */
+.btnEliminar, .btnModificar {
+  background-color: #ff0000;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  margin-right: 5px;
+  cursor: pointer;
+}
+
+.btnModificar {
+  background-color: #007bff;
+}
+
+.btnEliminar:hover, .btnModificar:hover {
+  background-color: #ff3333;
+}
+
+/* Estilos para el encabezado */
+.Namelist {
+  text-align: center;
+}
+
+/* Estilos para el contenedor principal */
+.campaign-registration {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Estilos para los mensajes emergentes (toast) */
+.Toastify__toast {
+  background-color: #333;
+  color: #fff;
+}
+
+/* -------- */
+/* Estilos para la tabla */
+.TableUsuarios {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+.TableUsuarios th,
+.TableUsuarios td {
+  border: 1px solid #ccc;
+  padding: 8px;
+  text-align: center;
+}
+
+.TableUsuarios th {
+  background-color: #f2f2f2;
+}
+
+.TableUsuarios tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+/* Estilos para la paginación */
+.pagination {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  justify-content: center;
+}
+
+.pagination li {
+  margin: 0 5px;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 5px 10px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+}
+
+.pagination li.active {
+  background-color: #007bff;
+  color: #fff;
+  border: 1px solid #007bff;
+}
+
+.pagination li:hover {
+  background-color: #007bff;
+  color: #fff;
+  border: 1px solid #007bff;
+}
+
+/* Estilos para el cuadro de confirmación */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.delete-confirm {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.delete-confirm p {
+  margin: 0 0 10px;
+}
+
+.delete-confirm button {
+  margin: 0 10px;
+  padding: 5px 10px;
+  cursor: pointer;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+}
+
+.delete-confirm button:hover {
+  background-color: #0056b3;
+}
+
+
+/* ---Eliminar si es necesario */
+/* Estilos para la tabla */
+.TableTipo {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+.TableTipo th,
+.TableTipo td {
+  border: 1px solid #ccc;
+  padding: 8px;
+  text-align: center;
+}
+
+.TableTipo th {
+  background-color: #f2f2f2;
+}
+
+.TableTipo tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+/* Estilos para la paginación */
+.pagination {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  justify-content: center;
+}
+
+.pagination li {
+  margin: 0 5px;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 5px 10px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+}
+
+.pagination li.active {
+  background-color: #007bff;
+  color: #fff;
+  border: 1px solid #007bff;
+}
+
+.pagination li:hover {
+  background-color: #007bff;
+  color: #fff;
+  border: 1px solid #007bff;
+}
+
+/* Estilos para el cuadro de confirmación */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.delete-confirm {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.delete-confirm p {
+  margin: 0 0 10px;
+}
+
+.delete-confirm button {
+  margin: 0 10px;
+  padding: 5px 10px;
+  cursor: pointer;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+}
+
+.delete-confirm button:hover {
+  background-color: #0056b3;
+}

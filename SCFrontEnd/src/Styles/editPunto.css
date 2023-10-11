@@ -1,0 +1,109 @@
+/* Estilos generales */
+.edit-container-punto {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    background-color: #f9f9f9;
+    text-align: center;
+  }
+  
+  .edit-punto {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .edit-id {
+    font-size: 16px;
+    color: #777;
+  }
+  
+  /* Estilos del formulario */
+  .edit-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .edit-input {
+    margin: 10px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .edit-label {
+    font-size: 16px;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  .edit-input-field {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .btnGuardar {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 20px;
+  }
+  
+  /* Estilos para ToastContainer (mensajes emergentes) */
+  .Toastify__toast-container {
+    z-index: 9999;
+    top: 60px;
+    right: 10px;
+    position: fixed;
+  }
+  
+  .Toastify__toast {
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  }
+  
+  .Toastify__toast--success {
+    background-color: #28a745;
+  }
+  
+  .Toastify__toast-body {
+    font-size: 16px;
+    padding: 10px;
+  }
+  
+  .Toastify__close-button {
+    color: #fff;
+    font-weight: bold;
+  }
+  
+  /* Estilos para el botón "Guardar" */
+  .btnGuardar {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 20px;
+  }
+  
+  .btnGuardar:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Estilos para los campos de archivo */
+  .edit-input-field[type="file"] {
+    font-size: 16px;
+    padding: 5px;
+  }
+  

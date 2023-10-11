@@ -1,0 +1,34 @@
+Comando para laravel
+
+1-crear proyecto
+composer create-project laravel/laravel api-rest
+
+2-abrir proyecto
+cd api-rest
+
+3-poner Autenticacion sactum
+composer require laravel/sanctum
+
+4-agregar migraciones requeridas para sactum
+php artisan vendor:publish --provider="Laravel\Sanctum\SanctumServiceProvider"
+
+5-agregar migraciones del proyecto
+ php artisan migrate
+
+
+6-crear un migracion, controlador y modelo
+php artisan make:model Voluntarios -mcr
+
+
+7-crear el controllador de auth
+php artisan make:controller AuthController
+
+8-crear un seeder "guardar datos de los voluntarios por medio del api back , en el databaseseeder se llama el nuevo seeder para guardar los datos"
+php artisan make:seeder VoluntarioSeed
+
+
+9-guardar los datos en la base
+ php artisan db:seed
+
+10- iniciar server
+php artisan serve

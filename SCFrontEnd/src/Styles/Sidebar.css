@@ -1,0 +1,106 @@
+.link.parent-item.capitalize.nav-link {
+  /* Establecer el ancho en 25px */
+  width: 25px;
+}
+
+/* Estilos para el botón de hamburguesa */
+.sidebar-toggle-button {
+  background-color: transparent;
+  border: none;
+  padding: 10px;
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  z-index: 2;
+  cursor: pointer;
+  font-size: 20px;
+  color: white;
+}
+
+/* Estilos para el icono de hamburguesa (las tres rayitas) */
+.sidebar-toggle-button::before {
+  content: "☰";
+}
+
+/* Estilos para el sidebar visible */
+.sidebar.visible {
+  background-color: #333;
+  color: white;
+  width: 25px;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: -250px; 
+  transition: left 0.3s ease; 
+  overflow-y: auto;
+  padding-top: 20px;
+}
+
+.div-sidebar{
+  position: fixed;
+  z-index: 10;
+}
+
+/* Estilos para los botones en el sidebar */
+.sidebar .BtnNav {
+  background-color: transparent;
+  border: none;
+  padding: 15px 20px;
+  margin: 0;
+  width: 100%;
+  text-align: left;
+  color: black;
+  transition: background-color 0.3s ease;
+  display: block;
+}
+
+/* Estilos para los botones al hacer hover */
+.sidebar .BtnNav:hover {
+  background-color: #555;
+
+}
+
+/* Estilos para los enlaces en el sidebar */
+.sidebar .nav-link {
+  text-decoration: none;
+  width: 25px;
+}
+
+/* Estilos para el encabezado del sidebar */
+.sidebar .sidebar-header {
+  background-color: #222;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Estilos para el logo o título del dashboard */
+.sidebar .sidebar-logo {
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+/* Estilos para resaltar el enlace activo */
+.sidebar .nav-link.active .BtnNav {
+  background-color: #555;
+  
+}
+
+
+/* Estilos para el pie de página del sidebar */
+.sidebar .sidebar-footer {
+  background-color: #222;
+  padding: 10px;
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+/* Estilo para el texto del pie de página */
+.sidebar .sidebar-footer p {
+  margin: 0;
+  color: white;
+}
+
