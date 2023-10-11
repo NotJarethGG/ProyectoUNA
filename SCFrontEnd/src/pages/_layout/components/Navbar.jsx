@@ -1,32 +1,53 @@
+import React from 'react';
+import {
+  Collapse,
+  Navbar,
+  NavbarToggler,
+  NavbarBrand,
+  Nav,
+  NavItem,
+  NavLink,
+ } from 'reactstrap';
 
-import { NavLink } from 'react-router-dom'
+export default class NavbarNav extends React.Component {
+  constructor(props) {
+    super(props);
 
-const Navbar = () => {
-    
+    this.toggle = this.toggle.bind(this);
+    this.state = {
+      isOpen: false
+    };
+  }
+  toggle() {
+    this.setState({
+      isOpen: !this.state.isOpen
+    });
+  }
+  render() {
     return (
-        
-        <nav className='navbar'>
-            
-            
-            <NavLink
-                className='link parent-item capitalize nav-link'
-                to="home"   style={{ color: 'white'}}><button className='BtnNav'><h3>Home</h3></button></NavLink >
-            
-            
-            <NavLink
-                className='link parent-item capitalize nav-link'
-                to="listaVoluntarios"  style={{ color: 'white' }}><button className='BtnNav'><h3>Lista Voluntarios</h3></button></NavLink >
-            
-            <NavLink
-                className='link parent-item capitalize nav-link'
-                to="campañas"  style={{ color: 'white' }}><button className='BtnNav'><h3>Campañas</h3></button></NavLink >
-             <NavLink
-                className='link parent-item capitalize nav-link'
-                to="ListUsuarios"  style={{ color: 'white' }}><button className='BtnNav'><h3>Usuarios</h3></button></NavLink >
-          
-      
-        </nav>
-    )
+      <div>
+        <body>
+           <Navbar color="light" light expand="md">
+          <NavbarBrand href="/home">Sendero Cornezuelo</NavbarBrand>
+          <NavbarToggler onClick={this.toggle} />
+          <Collapse isOpen={this.state.isOpen} navbar>
+            <Nav className="ms-auto" navbar>
+              <NavItem>
+                <NavLink className='comp' href="/components/">Components</NavLink>
+              </NavItem>
+              <NavItem>
+                <NavLink href="https://github.com/reactstrap/reactstrap">GitHub</NavLink>
+              </NavItem>
+              <NavItem>
+                <NavLink href= "/login">Login</NavLink>
+              </NavItem>
+             
+            </Nav>
+          </Collapse>
+        </Navbar>
+        </body>
+       
+      </div>
+    );
+  }
 }
-
-export default Navbar

@@ -38,7 +38,7 @@ const CrearTipo = () => {
   };
 
   return (
-    <div className="registro">
+    <div className="CrearTipo">
         <h2>Crear Tipo Voluntariado/Campaña</h2>
         <form onSubmit={handleRegistro}>
           <div>
@@ -50,7 +50,9 @@ const CrearTipo = () => {
               required
             />
           </div>
-          <button type="submit">Crear</button>
+          <div className="center-buton">
+            <button type="submit">Registrarse</button>
+          </div>
         </form>
         <ToastContainer />
       </div>

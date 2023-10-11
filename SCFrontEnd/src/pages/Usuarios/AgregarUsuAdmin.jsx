@@ -138,7 +138,10 @@ const Registro = () => {
             required
           />
         </div>
+        <div className="center-button">
         <button type="submit">Registrar</button>
+        </div>
+        
       </form>
       <ToastContainer />
     </div>

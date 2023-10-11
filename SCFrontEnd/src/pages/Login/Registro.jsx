@@ -105,10 +105,25 @@ const Registro = () => {
           />
         </div>
         <div>
+            <label htmlFor="alimentacion" className="label">Seleccione el Rol</label>
+            <select
+                id="alimentacion"
+                className="select" // Agrega una clase para el combobox
+               // onChange={(e) => setrol(e.target.value)}
+                //value={rol}
+                required
+              >
+                <option value=""> </option>
+                <option value="Administrador">Administrador</option>
+                <option value="Voluntariao">Voluntariao</option>
+            </select>
+        </div>
+        <div>
           <label htmlFor="correo">Correo:</label>
           <input
             type="email"
             id="correo"
+            placeholder='ejemplo@gmail.com'
             ref={UsuarioEmail}
             required
           />
@@ -118,11 +133,14 @@ const Registro = () => {
           <input
             type="password"
             id="contrasena"
+            placeholder='Ingrese su contraseña'
             ref={UsuarioPassword}
             required
           />
         </div>
-        <button type="submit">Registrarse</button>
+        <div className="center-button">
+            <button type="submit">Registrarse</button>
+        </div>
       </form>
       <ToastContainer />
     </div>

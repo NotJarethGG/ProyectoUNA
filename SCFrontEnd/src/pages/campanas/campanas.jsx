@@ -47,7 +47,7 @@ const Campanas = () => {
   };
 
   return (
-    <div className="registro">
+    <div className="campanas">
       <h2>Nueva Campaña</h2>
       <form onSubmit={handleRegistro}>
         <div>
@@ -95,6 +95,7 @@ const Campanas = () => {
                 value={alimentacion}
                 required
               >
+                <option value=" "> </option>
                 <option value="Sí">Sí</option>
                 <option value="No">No</option>
             </select>
@@ -126,11 +127,14 @@ const Campanas = () => {
                   value={inOex}
                   required
                 >
+                  <option value=""> </option>
                   <option value="Interno">Interno</option>
                   <option value="Externo">Externo</option>
             </select>
           </div>
-        <button type="submit">Crear</button>
+          <div className="center-buttonn">
+            <button type="submit">Reservar</button>
+        </div>
       </form>
       <ToastContainer />
     </div>

@@ -1,0 +1,19 @@
+
+
+.Home{
+
+    .imgBackground{
+
+        .imagen{
+            width: 100%; // Cambia el valor según el ancho deseado
+            max-height: 90vh;
+            display: block; // Asegura que la imagen sea un elemento de bloque
+            margin: 0 auto; // Centra la imagen horizontalmente
+        }
+
+        h5.title{
+            color: red;
+        }
+
+    }
+}

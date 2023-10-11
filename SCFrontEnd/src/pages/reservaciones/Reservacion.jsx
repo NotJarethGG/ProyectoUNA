@@ -50,7 +50,7 @@ const Reservacion = () => {
   };
 
   return (
-    <div className="registro">
+    <div className="reservaciones">
         <h2>Reservar Tour</h2>
         <form onSubmit={handleRegistro}>
           <div>
@@ -129,7 +129,10 @@ const Reservacion = () => {
               required
             />
           </div>
+          <div className='centerr-button'>
           <button type="submit">Reservar</button>
+          </div>
+          
         </form>
         <ToastContainer />
       </div>

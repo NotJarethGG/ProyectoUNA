@@ -2,8 +2,10 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 //estilos
 import './index.css'
+import './Styles/SidebarC.scss'
+import './Styles/Home.scss'
 import './Styles/Editar.css'
-import './Styles/SidebarC.css'
+// import './Styles/SidebarC.css'
 import './Styles/Botones.css'
 import './Styles/Tablas.css'
 import './Styles/Login.css'
@@ -11,7 +13,9 @@ import './Styles/EditCamp.css'
 import './Styles/Registro.css' 
 import './Styles/confirmacion.css'
 import './Styles/EditarTipo.css'
+import './Styles/CrearTipo.css'
 import './Styles/Puntos.css'
+import './Styles/Reservaciones.css'
 import './Styles/editPunto.css'
 //Rutas
 import { Layout } from './pages/_layout/Layout'
@@ -41,6 +45,8 @@ import VOluntariados from './pages/voluntariados/voluntariado'
 import EditarVOluntariado from './pages/voluntariados/editarVoluntariado'
 import ListaVOluntariados from './pages/voluntariados/listaVOluntariados'
 
+import 'bootstrap/scss/bootstrap.scss'
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 export const ThemeContext = React.createContext(null)
 

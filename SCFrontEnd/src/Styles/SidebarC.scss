@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;800&family=Rubik:wght@400;600&display=swap');
+
+
+*{
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  font-family: 'Montserrat', sans-serif;
+  font-family: 'Rubik', sans-serif;
+}
+
+.flex{
+  display: flex ;
+}
+
+$light: #ffffff;
+$gray: #e7e9eb;
+
+.Navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 105, 40, 0.829);
+  padding: 1rem 2rem;
+  border-width: solid $gray;
+  border-bottom: 1px solid $gray;
+  z-index: 1000; /* Asegura que el Navbar esté por encima de otros elementos */
+}
+
+/* Añade un margen superior al cuerpo para evitar que el contenido se solape con el Navbar */
+body {
+  margin-top: 56px; /* Ajusta el valor según la altura de tu Navbar */
+}
+
+
+ 
+.sidebar{
+  width: 14rem;
+  height: calc(100vh - 1px);
+  border-right: solid $gray;
+  position: fixed;
+  z-index: 10;
+  .logoContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .logo {
+      max-width: 30%;
+      margin-top: 40px;
+    }
+    
+    h5.title{
+      font-size: 20.42px;
+      color: rgba(0, 105, 40, 0.829);
+      padding: 0 0 0 8px;
+      margin-top: 40px;
+    } 
+  }
+ 
+  .burgerContainer {
+    content: "";
+   // background-color:rgba(0, 105, 40, 0.829);
+    position: absolute;
+    right:calc(-35px  / 2);
+    top: calc(9rem  / 1.15);
+    width: 35px;
+    height: 35px;
+    border-radius: 2rem;
+    z-index: 1;
+     .trigger{
+        content: "";
+        margin-right: 500px;
+        width: 35px;
+        height: 35px;
+        background-color: red;
+        cursor: pointer;
+        z-index: 2;
+        opacity: 0;
+     }
+     /*
+     .Menu {
+      content: "";
+      background-color: rgb(0, 0, 0);
+      position: relative;
+      z-index: 1;
+      width: 20px;
+      height: 3px;
+      border-radius: 2rem;
+      bottom: calc(35px / 2);
+      left: 0.45rem;
+     }
+
+     .Menu::after {
+    content: '';
+      background-color: rgb(0, 0, 0);
+      position: absolute;
+      width: 20px;
+      height: 3px;
+      border-radius: 2rem;
+      top: 0.4rem;
+      transform: translatey(-0.4rem) rotate (45deg);
+
+    }
+
+    .Menu::before{
+    content: '';
+    background-color: rgb(0, 0, 0);
+    position: absolute;
+    width: 20px;
+    height: 3px;
+    border-radius: 2rem;
+    top:calc(-0.4rem);
+    transform: translatey(0.4rem) rotate (45deg);
+    }
+*/
+  }
+  .burgerContainer::after{
+        content: '';
+        left: -1355px;
+        position: absolute;
+        right: 35px;
+        top: calc(50px / 30);
+        z-index: 0;
+        width: (3.5rem + 10.5rem);
+        background-color: $gray;
+        height: 2px;
+
+      }
+  ul{
+    list-style: none;
+    padding: 200px 2rem;
+    margin-top: -140px; 
+    li{
+      margin-bottom: 10px;   
+      a{
+        text-decoration: none;     
+        &.active{
+          background-color: $gray ;        
+        }
+      }
+    }
+  }
+
+}
