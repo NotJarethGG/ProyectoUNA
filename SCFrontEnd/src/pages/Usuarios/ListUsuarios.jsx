@@ -55,8 +55,8 @@ const ListUsuarios = () => {
     <>
       <div className="user-registration">
         <h1 className="Namelist">Registro de Usuarios</h1>
-        <Link to="/agregar-usuario-admin" className="btnRegistrarAdmin">
-          <button>Crear Usuario</button>
+        <Link to="/agregar-usuario-admin" >
+          <button className='btnAgregarDesdeAdmin'>Crear Usuario</button>
         </Link>
         <div className="Div-Table">
           <table className="TableUsuarios">

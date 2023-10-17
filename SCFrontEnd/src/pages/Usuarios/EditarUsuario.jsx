@@ -80,6 +80,7 @@ const EditUsuario = () => {
 return (
   <div className="registro">
   <h2>Modificar Usuario</h2>
+  <p className="edit-id">ID del Usuario a editar: {id}</p>
   <form onSubmit={handleRegistro}>
     <div>
       <label htmlFor="nombre">Nombre:</label>

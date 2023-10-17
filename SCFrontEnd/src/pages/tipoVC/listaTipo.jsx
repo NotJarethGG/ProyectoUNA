@@ -60,7 +60,7 @@ const ListaTipos = () => {
         
         <h1 className="Namelist">Registro de Tipos</h1>
         <Link to="/agregar-tipo-admin">
-        <button>Crear Tipo</button>
+        <button className="btnAgregarDesdeAdmin">Crear Tipo</button>
         </Link>
         <div className="Div-Table">
           <table className="TableTipo">

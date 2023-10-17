@@ -73,47 +73,47 @@ const EditarVOluntariado = () => {
   }, [id]);
 
   return (
-    <div className='edit-camp'>
-      <h1>Editar Voluntariado</h1>
-      <p>ID del voluntariado a editar: {id}</p>
+<div className="registro">
+      <h2>Editar Voluntariado</h2>
+      <p className="edit-id">ID del Tipo a editar: {id}</p>
       <form onSubmit={handleRegistro}>
-  <div>
-    <label htmlFor="nombre" className='nombrecamp'>Nombre:</label>
-    <input
-      type="text"
-      id="nombre"
-      ref={VOluntariadonombre}
-      required
-    />
-  </div>
-  <div>
-    <label htmlFor="descripcion"className='Desccamp'>Descripcion:</label>
-    <input
-      type="text"
-      id="descripcion"
-      ref={VOluntariadodescripcion}
-      required
-    />
-  </div>
-  <div>
-    <label htmlFor="ubicacion" className='Ubicamp'>Ubicacion:</label>
-    <input
-      type="text"
-      id="ubicacion"
-      ref={VOluntariadoubicacion}
-      required
-    />
-  </div>
-  <div>
-    <label htmlFor="fecha" className='Feccamp'>Fecha:</label>
-    <input
-      type="Date"
-      id="fecha"
-      ref={VOluntariadofecha}
-      required
-    />
-  </div>
-  <div>
+        <div>
+          <label htmlFor="nombre">Nombre del voluntariado:</label>
+          <input
+            type="text"
+            id="nombre"
+            ref={VOluntariadonombre}
+            required
+          />
+        </div>
+        <div>
+          <label htmlFor="descripcion">Descripción del  voluntariado:</label>
+          <input
+            type="text"
+            id="descripcion"
+            ref={VOluntariadodescripcion}
+            required
+          />
+        </div>
+        <div>
+          <label htmlFor="ubicacion">Ubicación del  voluntariado:</label>
+          <input
+            type="text"
+            id="ubicacion"
+            ref={VOluntariadoubicacion}
+            required
+          />
+        </div>
+        <div>
+          <label htmlFor="fecha">Fecha del voluntariado:</label>
+          <input
+            type="date"
+            id="fecha"
+            ref={VOluntariadofecha}
+            required
+          />
+        </div>
+        <div>
             <label htmlFor="alimentacion" className="label">¿Se dará alimentación?</label>
             <select
                 id="alimentacion"
@@ -126,8 +126,8 @@ const EditarVOluntariado = () => {
                 <option value="No">No</option>
             </select>
         </div>
-  <div>
-          <label htmlFor="cupo" className='capcamp'>Capacidad:</label>
+        <div>
+          <label htmlFor="cupo">Capacidad:</label>
           <input
             type="text"
             id="cupo"
@@ -136,7 +136,7 @@ const EditarVOluntariado = () => {
           />
         </div>
         <div>
-          <label htmlFor="tipo"className='tipcamp'>Tipo:</label>
+          <label htmlFor="tipo">Tipo:</label>
           <input
             type="text"
             id="tipo"
@@ -157,9 +157,12 @@ const EditarVOluntariado = () => {
                   <option value="Externo">Externo</option>
             </select>
           </div>
-  <button className ="btnGuardar" type="submit">Modificar</button>
-</form>
-<ToastContainer />
+          <div className='center-buttonn'>
+          <button type="submit">Crear</button>
+          </div>
+        
+      </form>
+      <ToastContainer />
     </div>
   );
 };

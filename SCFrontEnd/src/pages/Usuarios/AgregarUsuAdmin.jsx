@@ -140,8 +140,9 @@ const Registro = () => {
         </div>
         <div className="center-button">
         <button type="submit">Registrar</button>
+        {/* <button className='btnCancelarTodo'>Cancelar</button>  */}
         </div>
-        
+       
       </form>
       <ToastContainer />
     </div>

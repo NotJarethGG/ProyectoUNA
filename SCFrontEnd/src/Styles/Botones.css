@@ -39,6 +39,7 @@
     background-color: #ff4136; /* Cambia el color de fondo al pasar el mouse */
   }
   
+
   /* Botón de modificar */
   .btnModificar {
     background-color: #007bff; /* Color de fondo azul */
@@ -71,6 +72,11 @@
     background-color: #c0392b; /* Cambio de color de fondo al pasar el mouse */
   }
   
+  .btnAgregarDesdeAdmin{
+    background-color: #007bff;
+    border-radius: 5px;
+    color: white;
+  }
 
 
   /* Estilo de botón básico */

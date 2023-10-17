@@ -58,9 +58,9 @@ const EditReservaciones = () => {
   }, [id]);
 
   return (
-    <div>
-      <h1>Editar Reserva</h1>
-      <p>ID de la reserva a editar: {id}</p>
+    <div className="edit-container-tipo">
+      <h1 className="edit-tipo">Editar Reserva</h1>
+      <p className="edit-id">ID de la reserva a editar: {id}</p>
       <form onSubmit={handleRegistro}>
 
         <div>

@@ -62,7 +62,7 @@ const ListaVOluntariados = () => {
       <div className="campaign-registration">
         <h1 className="Namelist">Registro de Voluntariados</h1>
         <div className="Div-Table">
-          <Link to="/nuevo-voluntariados-admin"><button>Crear</button></Link>
+          <Link to="/nuevo-voluntariados-admin"><button className='btnAgregarDesdeAdmin'>Crear Voluntariado</button></Link>
           <table className="TableVOluntariado">
             <thead>
               <tr>

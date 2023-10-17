@@ -74,7 +74,8 @@ const EditarCampaña = () => {
 
   return (
     <div className="campanas">
-    <h2>Nueva Campaña</h2>
+    <h2>Editar Campaña</h2>
+    <p className="edit-id">ID del la campaña a editar: {id}</p>
     <form onSubmit={handleRegistro}>
       <div>
         <label htmlFor="nombre">Nombre de la campaña:</label>

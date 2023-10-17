@@ -64,7 +64,7 @@ const ListaCampanas = () => {
       <div className="campaign-registration">
         <h1 className="Namelist">Registro de Campañas</h1>
         <Link to='/crear-campana-admin'>
-        <button className='CrearCampana'>Crear Campaña</button>
+        <button className='btnAgregarDesdeAdmin'>Crear Campaña</button>
         </Link>
         <div className="Div-Table">
           <table className="TableCampaña">
@@ -136,98 +136,7 @@ const ListaCampanas = () => {
 
       {/* Estilos en línea */}
       <style>
-        {`
-          /* Estilos para la tabla */
-          .TableCampaña {
-            width: 100%;
-            border-collapse: collapse;
-            margin-bottom: 20px;
-          }
-
-          .TableCampaña th,
-          .TableCampaña td {
-            border: 1px solid #ccc;
-            padding: 8px;
-            text-align: center;
-          }
-
-          .TableCampaña th {
-            background-color: #f2f2f2;
-          }
-
-          .TableCampaña tr:nth-child(even) {
-            background-color: #f2f2f2;
-          }
-
-          /* Estilos para la paginación */
-          .pagination {
-            display: flex;
-            list-style: none;
-            padding: 0;
-            justify-content: center;
-          }
-
-          .pagination li {
-            margin: 0 5px;
-            cursor: pointer;
-            font-size: 16px;
-            padding: 5px 10px;
-            border: 1px solid #ccc;
-            background-color: #fff;
-          }
-
-          .pagination li.active {
-            background-color: #007bff;
-            color: #fff;
-            border: 1px solid #007bff;
-          }
-
-          .pagination li:hover {
-            background-color: #007bff;
-            color: #fff;
-            border: 1px solid #007bff;
-          }
-
-          /* Estilos para el cuadro de confirmación */
-          .confirmation-modal {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.5);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            z-index: 999;
-          }
-
-          .confirmation-content {
-            background: #fff;
-            padding: 20px;
-            border-radius: 5px;
-            text-align: center;
-          }
-
-          .btn-confirm {
-            margin: 5px;
-            padding: 10px 20px;
-            border: none;
-            cursor: pointer;
-            border-radius: 5px;
-            font-weight: bold;
-          }
-
-          .btn-yes {
-            background-color: red;
-            color: white;
-          }
-
-          .btn-no {
-            background-color: blue;
-            color: white;
-          }
-        `}
+        
       </style>
     </>
   );

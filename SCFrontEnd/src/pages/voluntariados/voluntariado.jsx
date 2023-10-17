@@ -50,6 +50,7 @@ const VOluntariados = () => {
   return (
     <div className="registro">
       <h2>Nuevo Voluntariado</h2>
+      
       <form onSubmit={handleRegistro}>
         <div>
           <label htmlFor="nombre">Nombre del voluntariado:</label>

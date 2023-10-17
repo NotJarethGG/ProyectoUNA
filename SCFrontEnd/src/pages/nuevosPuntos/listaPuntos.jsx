@@ -60,7 +60,7 @@ const ListaPuntos = () => {
       <div className="type-registration">
         <h1 className="Namelist">Lista Puntos De Interés Sostenible</h1>
         <Link to='/nuevo-punto-admin'>
-          <button>Crear Punto</button>
+          <button className='btnAgregarDesdeAdmin'>Crear Punto</button>
         </Link>
         <div className="Div-Table">
           <table className="tableInteresSostenible">

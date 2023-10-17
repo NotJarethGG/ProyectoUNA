@@ -67,7 +67,7 @@ const ListaReservaciones = () => {
     <>
       <div className="user-reservations">
         <h1 className="Namelist">Reservaciones</h1>
-        <Link to='/crear-reservacion-admin'><button>Crear Reservacion</button></Link>
+        <Link to='/crear-reservacion-admin'><button className="btnAgregarDesdeAdmin">Crear Reservacion</button></Link>
         <div className="Div-Table">
           <table className="TableReservaciones">
             <thead>
