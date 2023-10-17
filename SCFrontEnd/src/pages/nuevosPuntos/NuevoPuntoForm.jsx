@@ -110,6 +110,16 @@ const NuevoPuntoForm = () => {
             style={inputStyles}
           />
         </div>
+        {galeria && (
+          <div>
+            <img
+              src={URL.createObjectURL(galeria)}
+              alt="Vista previa de la imagen"
+              style={{ maxWidth: '100%', maxHeight: '200px' }}
+            />
+          </div>
+        )}
+
         <button type="submit" style={buttonStyles}>
           Crear Punto de Interés
         </button>

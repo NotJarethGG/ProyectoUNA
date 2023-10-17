@@ -120,6 +120,7 @@ class UsuariosController extends Controller
         //
     }
 
+   
 
     public function login(Request $request) {
         // Valida los datos de entrada

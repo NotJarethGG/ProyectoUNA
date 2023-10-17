@@ -41,7 +41,7 @@ const CrearTipo = () => {
     <div className="CrearTipo">
         <h2>Crear Tipo Voluntariado/Campaña</h2>
         <form onSubmit={handleRegistro}>
-          <div>
+          <div className='div-input-tipo'>
             <label htmlFor="nombreTipo">Nombre:</label>
             <input
               type="text"
@@ -51,7 +51,7 @@ const CrearTipo = () => {
             />
           </div>
           <div className="center-buton">
-            <button type="submit">Registrarse</button>
+            <button type="submit">crear</button>
           </div>
         </form>
         <ToastContainer />

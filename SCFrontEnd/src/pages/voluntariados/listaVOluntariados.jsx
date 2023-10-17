@@ -3,7 +3,7 @@ import { useQuery } from 'react-query';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTrashAlt, faFolderPlus } from '@fortawesome/free-solid-svg-icons';
 import { toast, ToastContainer } from 'react-toastify';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate , Link} from 'react-router-dom';
 import ReactPaginate from 'react-paginate';
 import { getVOluntariado, eliminarVOluntariado } from '../../services/VOluntariadosServicios';
 
@@ -62,6 +62,7 @@ const ListaVOluntariados = () => {
       <div className="campaign-registration">
         <h1 className="Namelist">Registro de Voluntariados</h1>
         <div className="Div-Table">
+          <Link to="/nuevo-voluntariados-admin"><button>Crear</button></Link>
           <table className="TableVOluntariado">
             <thead>
               <tr>
@@ -91,7 +92,7 @@ const ListaVOluntariados = () => {
                   <td>{voluntariados.inOex}</td>
                   <td>
                     <button onClick={() => handleShowConfirmation(voluntariados.id)} className="btnEliminar">
-                      <FontAwesomeIcon icon={faTrashAlt} /> Eliminar
+                      <FontAwesomeIcon icon={faTrashAlt} /> Borrar
                     </button>
                     <button onClick={() => handleEditVOluntariado(voluntariados.id)} className="btnModificar">
                       <FontAwesomeIcon icon={faFolderPlus} /> Editar
@@ -130,100 +131,7 @@ const ListaVOluntariados = () => {
       )}
 
       {/* Estilos en línea */}
-      <style>
-        {`
-          /* Estilos para la tabla */
-          .TableVOluntariado {
-            width: 100%;
-            border-collapse: collapse;
-            margin-bottom: 20px;
-          }
-
-          .TableVOluntariado th,
-          .TableVOluntariado td {
-            border: 1px solid #ccc;
-            padding: 8px;
-            text-align: center;
-          }
-
-          .TableVOluntariado th {
-            background-color: #f2f2f2;
-          }
-
-          .TableVOluntariado tr:nth-child(even) {
-            background-color: #f2f2f2;
-          }
-
-          /* Estilos para la paginación */
-          .pagination {
-            display: flex;
-            list-style: none;
-            padding: 0;
-            justify-content: center;
-          }
-
-          .pagination li {
-            margin: 0 5px;
-            cursor: pointer;
-            font-size: 16px;
-            padding: 5px 10px;
-            border: 1px solid #ccc;
-            background-color: #fff;
-          }
-
-          .pagination li.active {
-            background-color: #007bff;
-            color: #fff;
-            border: 1px solid #007bff;
-          }
-
-          .pagination li:hover {
-            background-color: #007bff;
-            color: #fff;
-            border: 1px solid #007bff;
-          }
-
-          /* Estilos para el cuadro de confirmación */
-          .confirmation-modal {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.5);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            z-index: 999;
-          }
-
-          .confirmation-content {
-            background: #fff;
-            padding: 20px;
-            border-radius: 5px;
-            text-align: center;
-          }
-
-          .btn-confirm {
-            margin: 5px;
-            padding: 10px 20px;
-            border: none;
-            cursor: pointer;
-            border-radius: 5px;
-            font-weight: bold;
-          }
-
-          .btn-yes {
-            background-color: red;
-            color: white;
-          }
-
-          .btn-no {
-            background-color: blue;
-            color: white;
-          }
-        `}
-      </style>
+      
     </>
   );
 };

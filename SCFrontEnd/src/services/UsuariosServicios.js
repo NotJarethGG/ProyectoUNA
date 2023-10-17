@@ -30,7 +30,7 @@ export const create = async (usuarios) => {
 
 
 
-export const ELiminarUsuario = async (id) => {
+export const  eliminarUsuario = async (id) => {
         try {
             const response = await api.delete(`user-delete/${id}`);
             console.log(response.data);

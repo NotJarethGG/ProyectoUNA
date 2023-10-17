@@ -1,33 +1,29 @@
 import { useState } from 'react';
 import { useQuery, useQueryClient } from 'react-query';
-import { getUsuarios, ELiminarUsuario } from '../../services/UsuariosServicios';
+import { getUsuarios, eliminarUsuario } from '../../services/UsuariosServicios';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTrashAlt, faFolderPlus } from '@fortawesome/free-solid-svg-icons';
 import { useNavigate } from 'react-router-dom';
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import ReactPaginate from 'react-paginate';
-import { Link } from 'react-router-dom'; // Importa Link
+import { Link } from 'react-router-dom';
 
 const ListUsuarios = () => {
-  const { data, isLoading, isError, refetch } = useQuery(
-    'usuarios',
-    getUsuarios,
-    { enabled: true }
-  );
+  const { data, isLoading, isError, refetch } = useQuery('usuarios', getUsuarios, { enabled: true });
   const navigate = useNavigate();
   const [deleteConfirm, setDeleteConfirm] = useState(null);
   const [currentPage, setCurrentPage] = useState(0);
   const itemsPerPage = 10;
   const queryClient = useQueryClient();
 
-  const handlePageChange = (selectedPage) => {
-    setCurrentPage(selectedPage.selected);
+  const handlePageChange = ({ selected }) => {
+    setCurrentPage(selected);
   };
 
   const handleDeleteUsuario = async (id) => {
     try {
-      await ELiminarUsuario(id);
+      await eliminarUsuario(id);
       await refetch();
       queryClient.invalidateQueries('usuarios');
       toast.success('¡Eliminado Exitosamente!', {
@@ -60,7 +56,7 @@ const ListUsuarios = () => {
       <div className="user-registration">
         <h1 className="Namelist">Registro de Usuarios</h1>
         <Link to="/agregar-usuario-admin" className="btnRegistrarAdmin">
-          Crear Usuario
+          <button>Crear Usuario</button>
         </Link>
         <div className="Div-Table">
           <table className="TableUsuarios">
@@ -93,16 +89,10 @@ const ListUsuarios = () => {
                   <td>{usuario.email}</td>
                   <td>{usuario.status}</td>
                   <td>
-                    <button
-                      onClick={() => handleDeleteConfirmation(usuario.id)}
-                      className="btnEliminar"
-                    >
-                      <FontAwesomeIcon icon={faTrashAlt} /> Eliminar
+                    <button onClick={() => handleDeleteConfirmation(usuario.id)} className="btnEliminar">
+                      <FontAwesomeIcon icon={faTrashAlt} /> Borrar
                     </button>
-                    <button
-                      onClick={() => handleEditUsuario(usuario.id)}
-                      className="btnModificar"
-                    >
+                    <button onClick={() => handleEditUsuario(usuario.id)} className="btnModificar">
                       <FontAwesomeIcon icon={faFolderPlus} /> Editar
                     </button>
                   </td>

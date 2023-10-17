@@ -29,9 +29,9 @@
     color: white; /* Color del texto en blanco */
     border: none; /* Sin borde */
     border-radius: 5px; /* Borde redondeado */
-    padding: 8px 12px; /* Espaciado interno */
+    padding: 1px 1px; /* Espaciado interno */
     cursor: pointer; /* Cambia el cursor a una mano */
-    margin-right: 10px; /* Espaciado a la derecha (ajusta según tus necesidades) */
+    /* Espaciado a la derecha (ajusta según tus necesidades) */
   }
   
   /* Estilo al pasar el mouse sobre el botón de eliminar */
@@ -45,7 +45,7 @@
     color: white; /* Color del texto en blanco */
     border: none; /* Sin borde */
     border-radius: 5px; /* Borde redondeado */
-    padding: 8px 12px; /* Espaciado interno */
+    padding: 1px 1px; /* Espaciado interno */
     cursor: pointer; /* Cambia el cursor a una mano */
   }
   
@@ -74,7 +74,7 @@
 
 
   /* Estilo de botón básico */
-.btnRegistrarAdmin {
+/* .btnRegistrarAdmin {
   display: inline-block;
   padding: 10px 20px;
   background-color: #007bff;
@@ -83,25 +83,25 @@
   border: none;
   border-radius: 5px;
   cursor: pointer;
-}
+} */
 
 /* Cambiar el color de fondo en el hover */
-.btnRegistrarAdmin:hover {
+/* .btnRegistrarAdmin:hover {
   background-color: #0056b3;
-}
+} */
 
 /* Estilo para cuando se presiona el botón */
-.btnRegistrarAdmin:active {
+/* .btnRegistrarAdmin:active {
   background-color: #003c80;
-}
+} */
 
 /* Estilo para cuando el botón está deshabilitado */
-.btnRegistrarAdmin[disabled] {
+/* .btnRegistrarAdmin[disabled] {
   background-color: #ccc;
   cursor: not-allowed;
-}
+} */
 
 /* Estilo para el texto dentro del botón */
-.btnRegistrarAdmin span {
+/* .btnRegistrarAdmin span {
   font-weight: bold;
-}
+} */

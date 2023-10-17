@@ -73,94 +73,97 @@ const EditarCampaña = () => {
   }, [id]);
 
   return (
-    <div className='edit-camp'>
-      <h1>Editar Campaña</h1>
-      <p>ID de la Campña a editar: {id}</p>
-      <form onSubmit={handleRegistro}>
-  <div>
-    <label htmlFor="nombre" className='nombrecamp'>Nombre:</label>
-    <input
-      type="text"
-      id="nombre"
-      ref={Campananombre}
-      required
-    />
-  </div>
-  <div>
-    <label htmlFor="descripcion"className='Desccamp'>Descripcion:</label>
-    <input
-      type="text"
-      id="descripcion"
-      ref={Campanadescripcion}
-      required
-    />
-  </div>
-  <div>
-    <label htmlFor="ubicacion" className='Ubicamp'>Ubicacion:</label>
-    <input
-      type="text"
-      id="ubicacion"
-      ref={Campanaubicacion}
-      required
-    />
-  </div>
-  <div>
-    <label htmlFor="fecha" className='Feccamp'>Fecha:</label>
-    <input
-      type="Date"
-      id="fecha"
-      ref={Campanafecha}
-      required
-    />
-  </div>
-  <div>
-            <label htmlFor="alimentacion" className="label">¿Se dará alimentación?</label>
-            <select
-                id="alimentacion"
+    <div className="campanas">
+    <h2>Nueva Campaña</h2>
+    <form onSubmit={handleRegistro}>
+      <div>
+        <label htmlFor="nombre">Nombre de la campaña:</label>
+        <input
+          type="text"
+          id="nombre"
+          ref={Campananombre}
+          required
+        />
+      </div>
+      <div>
+        <label htmlFor="descripcion">Descripción de la campaña:</label>
+        <input
+          type="text"
+          id="descripcion"
+          ref={Campanadescripcion}
+          required
+        />
+      </div>
+      <div>
+        <label htmlFor="ubicacion">Ubicación de la campaña:</label>
+        <input
+          type="text"
+          id="ubicacion"
+          ref={Campanaubicacion}
+          required
+        />
+      </div>
+      <div>
+        <label htmlFor="fecha">Fecha de la campaña:</label>
+        <input
+          type="date"
+          id="fecha"
+          ref={Campanafecha}
+          required
+        />
+      </div>
+      <div>
+          <label htmlFor="alimentacion" className="label">¿Se dará alimentación?</label>
+          <select
+              id="alimentacion"
+              className="select" // Agrega una clase para el combobox
+              onChange={(e) => setAlimentacion(e.target.value)}
+              value={alimentacion}
+              required
+            >
+              <option value=" "> </option>
+              <option value="Sí">Sí</option>
+              <option value="No">No</option>
+          </select>
+      </div>
+      <div>
+        <label htmlFor="cupo">Capacidad:</label>
+        <input
+          type="text"
+          id="cupo"
+          ref={Campanacapacidad}
+          required
+        />
+      </div>
+      <div>
+        <label htmlFor="tipo">Tipo:</label>
+        <input
+          type="text"
+          id="tipo"
+          ref={Campanatipo}
+          required
+        />
+      </div>
+      <div>
+          <label htmlFor="inOex" className="label">¿Será para internos o externos?</label>
+          <select
+                id="inOex"
                 className="select" // Agrega una clase para el combobox
-                onChange={(e) => setAlimentacion(e.target.value)}
-                value={alimentacion}
+                onChange={(e) => setInOex(e.target.value)}
+                value={inOex}
                 required
               >
-                <option value="Sí">Sí</option>
-                <option value="No">No</option>
-            </select>
+                <option value=""> </option>
+                <option value="Interno">Interno</option>
+                <option value="Externo">Externo</option>
+          </select>
         </div>
-  <div>
-          <label htmlFor="cupo" className='capcamp'>Capacidad:</label>
-          <input
-            type="text"
-            id="cupo"
-            ref={Campanacapacidad}
-            required
-          />
-        </div>
-        <div>
-          <label htmlFor="tipo"className='tipcamp'>Tipo:</label>
-          <input
-            type="text"
-            id="tipo"
-            ref={Campanatipo}
-            required
-          />
-        </div>
-        <div>
-            <label htmlFor="inOex" className="label">¿Será para internos o externos?</label>
-            <select
-                  id="inOex"
-                  className="select" // Agrega una clase para el combobox
-                  onChange={(e) => setInOex(e.target.value)}
-                  value={inOex}
-                  required
-                >
-                  <option value="Interno">Interno</option>
-                  <option value="Externo">Externo</option>
-            </select>
-          </div>
-  <button className ="btnGuardar" type="submit">Modificar</button>
-</form>
-<ToastContainer />
-    </div>
+        <div className="center-buttonn">
+          <button type="submit">Modificar Campaña</button>
+      </div>
+    </form>
+    <ToastContainer />
+  </div>
   );
 };
 

@@ -133,7 +133,7 @@ const Campanas = () => {
             </select>
           </div>
           <div className="center-buttonn">
-            <button type="submit">Reservar</button>
+            <button type="submit">Crear</button>
         </div>
       </form>
       <ToastContainer />

@@ -60,7 +60,7 @@ const ListaTipos = () => {
         
         <h1 className="Namelist">Registro de Tipos</h1>
         <Link to="/agregar-tipo-admin">
-        <button className="TipoCrear" >Crear Tipo</button>
+        <button>Crear Tipo</button>
         </Link>
         <div className="Div-Table">
           <table className="TableTipo">
@@ -83,7 +83,7 @@ const ListaTipos = () => {
                       onClick={() => handleDeleteConfirmation(tipo.id)}
                       className="btnEliminar"
                     >
-                      <FontAwesomeIcon icon={faTrashAlt} /> Eliminar
+                      <FontAwesomeIcon icon={faTrashAlt} /> Borrar
                     </button>
                     <button
                       onClick={() => handleEditTipo(tipo.id)}

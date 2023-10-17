@@ -96,7 +96,7 @@ const ListaCampanas = () => {
                   <td>{campanas.inOex}</td>
                   <td>
                     <button onClick={() => handleShowConfirmation(campanas.id)} className="btnEliminar">
-                      <FontAwesomeIcon icon={faTrashAlt} /> Eliminar
+                      <FontAwesomeIcon icon={faTrashAlt} /> Borrar
                     </button>
                     <button onClick={() => handleEditCampaña(campanas.id)} className="btnModificar">
                       <FontAwesomeIcon icon={faFolderPlus} /> Editar

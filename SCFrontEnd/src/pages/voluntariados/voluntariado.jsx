@@ -131,7 +131,10 @@ const VOluntariados = () => {
                   <option value="Externo">Externo</option>
             </select>
           </div>
-        <button type="submit">Crear</button>
+          <div className='center-buttonn'>
+          <button type="submit">Crear</button>
+          </div>
+        
       </form>
       <ToastContainer />
     </div>

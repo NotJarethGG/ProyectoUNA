@@ -60,6 +60,7 @@ class NuevosPuntosController extends Controller
     {
         $nuevosPuntos = NuevosPuntos::all();
         return $nuevosPuntos;
+      
     }
 
     /**

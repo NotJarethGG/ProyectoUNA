@@ -1,9 +1,18 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import axios from 'axios';
 
 function Login() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [token, setToken] = useState(null); // Estado para almacenar el token
+
+  useEffect(() => {
+    // Recuperar el token del localStorage al cargar el componente
+    const storedToken = localStorage.getItem('token');
+    if (storedToken) {
+      setToken(storedToken);
+    }
+  }, []);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -17,6 +26,11 @@ function Login() {
       });
 
       if (response.data.status === 1) {
+        // Guardar el token en el localStorage
+        localStorage.setItem('token', JSON.stringify(response.data));
+        // Actualizar el estado con el token
+        setToken(response.data.token);
+
         console.log(response.data);
         // Aquí puedes manejar la lógica de autenticación exitosa
       } else {
@@ -32,6 +46,11 @@ function Login() {
   const handleLogout = async () => {
     try {
       axios.defaults.baseURL = 'http://127.0.0.1:8000/api/';
+
+      // Eliminar el token del localStorage
+      localStorage.removeItem('token');
+      // Limpiar el estado del token
+      setToken(null);
 
       const response = await axios.post('logout');
 
@@ -50,6 +69,19 @@ function Login() {
       // Manejar errores de red u otros errores
     }
   };
+
+  // Configurar Axios para enviar el token en cada solicitud
+  axios.interceptors.request.use(
+    (config) => {
+      if (token) {
+        config.headers['Authorization'] = `Bearer ${token}`;
+      }
+      return config;
+    },
+    (error) => {
+      return Promise.reject(error);
+    }
+  );
 
   return (
     <div className="Login" style={styles.container}>
@@ -89,7 +121,7 @@ function Login() {
 const styles = {
   container: {
     maxWidth: '400px',
-    margin: '100px auto 40px',
+    margin: '0 auto',
     padding: '20px',
     border: '1px solid #ccc',
     borderRadius: '5px',

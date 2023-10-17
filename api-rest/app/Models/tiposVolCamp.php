@@ -13,6 +13,7 @@ class tiposVolCamp extends Model
 
     protected $fillable = [
         'nombreTipo',
+        'statusVC',
     ];
 
     public $timestamps = false;

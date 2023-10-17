@@ -87,7 +87,7 @@ const Sidebar =() => {
     <div className="sidebar bg-light">
        <div className='logoContainer'>
         <img src= {Icon} alt ='icon' className ='logo' />
-        <h5 className='title'>Sendero cornizuelo.</h5>
+        <h5 className='title'>Sendero Cornizuelo.</h5>
         </div>
         <div className='burgerContainer'>
             <div className='trigger'></div>
@@ -98,12 +98,12 @@ const Sidebar =() => {
             <NavLink to = "/home" exact className='text-dark rounded py-2 w-100 d-inline-block px-3' 
              activeclassname="active"><FaIcons.ImHome className='me-2'/> Inicio</ NavLink>
         </li>  
-        {/* <li>
-            <NavLink to = "/registro" exact className='text-dark rounded py-2 w-100 d-inline-block px-3' 
-            activeclassname="active"><FaIconss.MdAppRegistration className='me-2'/> Registro</ NavLink>
-        </li> */}
         <li>
-            < NavLink to = "/listUsuarios" exact className='text-dark rounded py-2 w-100 d-inline-block px-3'
+            <NavLink to = "/login" exact className='text-dark rounded py-2 w-100 d-inline-block px-3' 
+            activeclassname="active"><FaIconss.MdAppRegistration className='me-2'/> Registro</ NavLink>
+        </li>
+        <li>
+            < NavLink to = "/listaUsuarios" exact className='text-dark rounded py-2 w-100 d-inline-block px-3'
             activeclassname="active"><FaIconsd.FaUsers className='me-2'/> Usuarios</ NavLink>
         </li>
         <li>

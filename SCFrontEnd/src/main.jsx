@@ -5,6 +5,7 @@ import './index.css'
 import './Styles/SidebarC.scss'
 import './Styles/Home.scss'
 import './Styles/Editar.css'
+import './Styles/Campanas.css'
 // import './Styles/SidebarC.css'
 import './Styles/Botones.css'
 import './Styles/Tablas.css'
@@ -60,7 +61,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
         <Route path="/" element={<Layout />}>
           <Route path="/home" element={<Home />} /> 
           <Route path="/campañas" element={<Campañas/>} /> 
-          <Route path="/listUsuarios" element={<ListUsuarios/>} /> 
+          <Route path="/listaUsuarios" element={<ListUsuarios/>} /> 
           <Route path="/ListRoles" element={<ListaRoles/>} /> 
           <Route path="/Login" element={<Login/>} /> 
           <Route path="/Registro" element={<Registro/>} /> 
@@ -85,6 +86,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
           <Route path="/listaVOluntariados"element={<ListaVOluntariados/>}/>
           <Route path='/voluntariado-update/:id'element={<EditarVOluntariado/>}/>
           <Route path="/voluntariados" element={<VOluntariados/>}/>
+          <Route path="/nuevo-voluntariados-admin" element={<VOluntariados/>}/>
           {/* <Route path="/ListUsuarios/create-usuario" element={<AgregarUsuAdmin/>} /> 
            */}
         </Route>
